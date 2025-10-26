@@ -1,0 +1,3 @@
+### TFLite Model Placeholder ###
+
+This file represents the location where the actual TensorFlow Lite Super-Resolution model (e.g., the standard FSRCNN or ESPCN model) would be placed for on-device inference. In a real implementation, this placeholder content would be replaced by the binary model file (e.g., downloaded from TensorFlow Hub or generated via quantization/training).
