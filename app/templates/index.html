@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Processing Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        /* Loading Indicator Styling */
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: #09f; /* Blue */
+            animation: spin 1s linear infinite;
+            margin: 20px 0;
+            display: none; /* Hidden by default, shown by JS */
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        /* Notification Styling */
+        .notification {
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: none;
+        }
+        .notification.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .notification.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Processing Service</h1>
+        <p>Click the button below to initiate the simulated AI inference task.</p>
+
+        <button id="processButton">Start AI Inference</button>
+
+        <!-- 1. Mandatory Loading Indicator -->
+        <div id="loadingIndicator" class="spinner"></div>
+
+        <!-- 2. Success/Failure Notification Area -->
+        <div id="notificationArea" class="notification"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
